@@ -14,7 +14,7 @@ public sendMessage(message) {
 }
   public getMessages = () => {
     return Observable.create((observer) => {
-      this.socket.on('new-message', (message) => {
+      this.socket.on('amessage', (message) => {
         observer.next(message);
       });
     });
